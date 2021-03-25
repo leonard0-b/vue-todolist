@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/master.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <title>Slider</title>
+</head>
+<body class="flex">
+  <div id="root">
+    <div class="container flex">
+      <div class="banner">
+        QUA CI VA UN'IMMAGINE
+      </div>
+      <div class="content flex">
+        <ul>
+          <li class="flex" v-for="todo in toDoList">
+            <span class="title">{{ todo.title }}</span>
+              <div class="cmd">
+                <span class="edit"><i class="far fa-edit"></i></span>
+                <span class="checked"><i class="fas fa-check-circle"></i></span>
+                <span class="trash"></span>
+              </div>
+          </li>
+        </ul>
+        <div class="footer flex">
+          <input type="text" placeholder="Inserisci una nuova nota" >
+          <button type="button" name="button">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="./assets/js/main.js" charset="utf-8"></script>
+</body>
+</html>
