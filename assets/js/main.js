@@ -9,7 +9,7 @@ var app = new Vue ({
         let toDoListDone = this.toDoList.filter((todoitem) => todoitem.status == "done");
         let toDoListToDo = this.toDoList.filter((todoitem) => todoitem.status == "todo");
 
-        return {...toDoListToDo,...toDoListDone};
+        return [...toDoListToDo,...toDoListDone];
       }
     },
     methods: {
@@ -20,13 +20,13 @@ var app = new Vue ({
             status: "todo"
           }
           this.toDoList.push(obj);
-          this.toDoList.reverse();
+          // this.toDoList.reverse();
           this.inputTxt= "";
           console.log(this.toDoList);
         }
       },
-      checked: function(index){
-        console.log(this.toDoList[index].status);
+      checked: function(todoitem){
+        let index = this.toDoList.indexOf(todoitem)
         this.toDoList[index].status = "done"
       }
     }
