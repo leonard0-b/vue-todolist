@@ -22,9 +22,9 @@
           <li class="flex" v-for="(todoitem, i) in toDoListComputed">
             <span class="title" :class="(todoitem.status == 'done') ? 'item-done' : ''">{{ todoitem.title }}</span>
               <div class="cmd">
-                <span v-if="todoitem.status != 'done'"class="edit"><i class="far fa-edit"></i></span>
+                <span v-if="todoitem.status != 'done'" class="edit"><i class="far fa-edit"></i></span>
                 <span v-if="todoitem.status != 'done'" class="checked" @click="checked(i)"><i class="fas fa-check-circle"></i></span>
-                <span v-if="todoitem.status == 'done'"class="trash"><i class="fas fa-minus-circle"></i></span>
+                <span v-if="todoitem.status == 'done'" class="trash"><i class="fas fa-minus-circle"></i></span>
               </div>
           </li>
         </ul>
