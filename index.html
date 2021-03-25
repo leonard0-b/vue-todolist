@@ -29,8 +29,8 @@
           </li>
         </ul>
         <div class="footer flex">
-          <input type="text" placeholder="Inserisci una nuova nota" >
-          <button type="button" name="button">Add</button>
+          <input type="text" v-model="inputTxt" placeholder="Inserisci una nuova nota">
+          <button type="button" name="button" @click="add">Add</button>
         </div>
       </div>
     </div>
