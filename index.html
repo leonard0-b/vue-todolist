@@ -24,7 +24,7 @@
               <div class="cmd">
                 <span v-if="todoitem.status != 'done'" class="edit"><i class="far fa-edit"></i></span>
                 <span v-if="todoitem.status != 'done'" class="checked" @click="checked(todoitem)"><i class="fas fa-check-circle"></i></span>
-                <span v-if="todoitem.status == 'done'" class="trash"><i class="fas fa-minus-circle"></i></span>
+                <span v-if="todoitem.status == 'done'" class="trash" @click="trash(todoitem)"><i class="fas fa-minus-circle"></i></span>
               </div>
           </li>
         </ul>

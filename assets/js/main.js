@@ -28,6 +28,10 @@ var app = new Vue ({
       checked: function(todoitem){
         let index = this.toDoList.indexOf(todoitem)
         this.toDoList[index].status = "done"
+      },
+      trash: function(todoitem) {
+        let index = this.toDoList.indexOf(todoitem)
+        this.toDoList.splice(index, 1)
       }
     }
 
