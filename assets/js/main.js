@@ -19,7 +19,7 @@ var app = new Vue ({
             title: this.inputTxt,
             status: "todo"
           }
-          this.toDoList.push(obj);
+          this.toDoList.unshift(obj);
           this.inputTxt= "";
           console.log(this.toDoList);
         }
