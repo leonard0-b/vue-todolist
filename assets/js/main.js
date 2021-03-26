@@ -20,7 +20,6 @@ var app = new Vue ({
             status: "todo"
           }
           this.toDoList.push(obj);
-          // this.toDoList.reverse();
           this.inputTxt= "";
           console.log(this.toDoList);
         }
@@ -28,6 +27,11 @@ var app = new Vue ({
       checked: function(todoitem){
         let index = this.toDoList.indexOf(todoitem)
         this.toDoList[index].status = "done"
+      },
+      edit: function (todoitem) {
+        let index = this.toDoList.indexOf(todoitem)
+        this.inputTxt = todoitem.title;
+        this.toDoList.splice(index, 1);
       },
       trash: function(todoitem) {
         let index = this.toDoList.indexOf(todoitem)
